@@ -5,15 +5,38 @@
 <head>
 
     <title>Booking</title>
+<script type="text/javascript">
+    window.addEventListener("load", function() {
+  const form = document.getElementById('myform');
+  form.addEventListener("submit", function(e) {
+    e.preventDefault();
+    const data = new FormData(form);
+    const action = e.target.action;
+    fetch(action, {
+      method: 'POST',
+      body: data,
+    })
+    .then(() => {
+      alert("You've subscribed — check your inbox shortly for a message!");
+    })
+  });
+});
+<script>
 
 </head>
 
 <body>
 
-    <form method="POST" action='https://script.google.com/macros/s/AKfycbwPvbvBkq6ekLefodkLPJWmpa_xe3PUALNpdCNlvHRL9AdY8jCzJ4nUtRfKOkk5tQlL/exec'>
-    <input name="Email" type="email" placeholder="Email" required>
-
-    <button type="submit">Send</button>
-  </form>
+<form 
+  method="POST" 
+  action="https://script.google.com/macros/s/AKfycbw2itcrlEuUwdNOBhu37_3mtvWtZmRa4eRSDvyxPyYmo_tKx8Z6_xc7G4mWARHsDoQ/exec" id="myform">
+Name:<br />
+<input name="Name" type="text">
+<br />
+Email:<br />
+<input name="Email" type="email">
+  
+<button type="submit">Subscribe!</button>
+</form>
    
 </body>
