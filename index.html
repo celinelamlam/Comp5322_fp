@@ -10,8 +10,7 @@
 
 <body>
 
-    <form method="POST" 
-    action="https://script.google.com/macros/s/AKfycbwPvbvBkq6ekLefodkLPJWmpa_xe3PUALNpdCNlvHRL9AdY8jCzJ4nUtRfKOkk5tQlL/exec">
+    <form method="POST">
     <input name="Email" type="email" placeholder="Email" required>
     <input name="Name" type="text" placeholder="Name" required>
     <button type="submit">Send</button>
@@ -20,7 +19,7 @@
 <script>
    const form = document.querySelector("#form")
    const submitButton = document.querySelector("#submit")
-   const scriptURL = 'https://script.google.com/macros/s/AKfycbwG9vCMBREFM4suhSiTdVPFu7-F-6JclKyZGGuKjFS-dqaZT6kKXS6r_15kub3YH2R5yw/exec'
+   const scriptURL = 'https://script.google.com/macros/s/AKfycbwPvbvBkq6ekLefodkLPJWmpa_xe3PUALNpdCNlvHRL9AdY8jCzJ4nUtRfKOkk5tQlL/exec'
 
    form.addEventListener('submit', e => {
      submitButton.disabled = true
