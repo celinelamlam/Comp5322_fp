@@ -10,33 +10,10 @@
 
 <body>
 
-    <form method="POST">
+    <form method="POST" action='https://script.google.com/macros/s/AKfycbwPvbvBkq6ekLefodkLPJWmpa_xe3PUALNpdCNlvHRL9AdY8jCzJ4nUtRfKOkk5tQlL/exec'>
     <input name="Email" type="email" placeholder="Email" required>
-    <input name="Name" type="text" placeholder="Name" required>
+
     <button type="submit">Send</button>
   </form>
-
-<script>
-   const form = document.querySelector("#form")
-   const submitButton = document.querySelector("#submit")
-   const scriptURL = 'https://script.google.com/macros/s/AKfycbwPvbvBkq6ekLefodkLPJWmpa_xe3PUALNpdCNlvHRL9AdY8jCzJ4nUtRfKOkk5tQlL/exec'
-
-   form.addEventListener('submit', e => {
-     submitButton.disabled = true
-     e.preventDefault()
-     let requestBody = new FormData(form)
-     fetch(scriptURL, { method: 'POST', body: requestBody})
-       .then(response => {
-          alert('Success!', response)
-          submitButton.disabled = false
-         })
-       .catch(error => {
-       alert('Error!', error.message)
-         submitButton.disabled = false
-
-       }
-       )
-   })
-</script>
-    
+   
 </body>
